@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Final Year</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="row container-fluid">
+      <div class="Bot col-lg-6">
+        <div class="bot-btn">
+          <div class="group-one">
+            <button type="button" class="btn btn-lg btn-space-bot play">Select</button>
+            <button type="button" class="btn btn-lg btn-space-bot">Record</button>
+          </div>
+          <div class="group-two">
+            <button type="button" class="btn btn-lg btn-space-bot">Play</button>
+            <button type="button" class="btn btn-lg btn-space-bot">Stop</button>
+            <button type="button" class="btn btn-lg btn-space-bot">Send</button>
+          </div>
+        </div>
+        <div class="lang">
+          <label for="language">Choose a language:</label>
+          <select name="language" id="language">
+            <option value="english">english</option>
+            <option value="spanish">spanish</option>
+            <option value="mexican">mexican</option>
+            <option value="hindi">hindi</option>
+          </select>
+        </div>
+        <div class="word-window"></div>
+        <div class="score-window">9/10</div>
+        <div class="middle-line"></div>
+
+      </div>
+      <div class="User col-lg-6">
+        <div class="bot-btn">
+          <div>
+            <button id="start" type="button" class="btn btn-lg btn-space-user">Start</button>
+            <a href="{% url 'graph' %}"><button id="stop" type="button" class="btn btn-lg btn-space-user" >Stop</button></a>
+
+          </div>
+          <div>
+            <button id="record" type="button" class="btn btn-lg btn-space-user">Record</button>
+            <button id="play" type="button" class="btn btn-lg btn-space-user">Play</button>
+            <button id="download" type="button" class="btn btn-lg btn-space-user">Send</button>
+          </div>
+        </div>
+        <div>
+          <span id="Msg"></span>
+        </div>
+        <div class="aud">
+          <audio id="recorded" controls></audio>
+        </div>
+        <div class="Instructions">
+          <h3>How to learn!</h3>
+          <ul>
+            <li>There are words displayed on the left side of the screen</li>
+            <li>To play the word on the screen click on play button</li>
+            <li>To pause on a given sentence click on pause button</li>
+            <li>To stop and replay it click on stop button and then play button</li>
+            <li>To record your voice click on record button</li>
+            <li>To listen how it sounds click on listen button</li>
+            <li>To send it click on send button</li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+
+    </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="{% static 'javascript/index.js' %}" charset="utf-8"></script>
+</body>
+
+</html>
