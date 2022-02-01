@@ -13,10 +13,10 @@ After processing you get the AUDIO WAVEFORM and SPECTROGRAM of your recorded aud
 Audio is recorded using JavaScript’s WebRTC module in the .wav file format.<br />
 Recorded audio is processed and plotted using Python libraries.<br />
 
-<!-- ## Problem ##
+## Problem ##
 We are not able to embed the Python into our site.<br />
 We are not able to get the recorded audio into our Python code.<br />
 And we are not able to get the Python output onto our site.<br />
 
-We have tried using Django to do this.<br />
-But we do not know much Django. -->
+Any solution using Django as well as Flask will do.<br />
+
